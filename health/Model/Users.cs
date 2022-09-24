@@ -2,7 +2,7 @@
 {
     public class GetUsers
     {
-        public User[] Users { get; set; }
+        public  List<User> Users { get; set; }
     }
 
     public class User
@@ -12,5 +12,6 @@
         public string LastName { get; set; }
         public string Gender { get; set; }
         public DateTimeOffset BirthDate { get; set; }
+        public List<UserVac>? UserVac { get; set; }
     }
 }

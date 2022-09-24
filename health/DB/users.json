@@ -5,7 +5,8 @@
       "firstName": "Mask",
       "lastName": "Bond",
       "gender": "Male",
-      "birthDate": "1970-01-01"
+      "birthDate": "1970-01-01",
+      "userVac": []
     },
     {
 
@@ -13,21 +14,24 @@
       "firstName": "Ahtiom",
       "lastName": "Belka",
       "gender": "Male",
-      "birthDate": "1970-01-01"
+      "birthDate": "1970-01-01",
+      "userVac": []
     },
     {
       "id": "d54ed580-a5e6-4f75-bfd7-ed2d29ffd6ca",
       "firstName": "Olgich",
       "lastName": "Svyshch",
       "gender": "Female",
-      "birthDate": "1970-01-01"
+      "birthDate": "1970-01-01",
+      "userVac": []
     },
     {
       "id": "32aeb91e-7663-4b5f-9e73-54af9aa3e70f",
       "firstName": "Katsya",
       "lastName": "Logoyda",
       "gender": "Female",
-      "birthDate": "1970-01-01"
+      "birthDate": "1970-01-01",
+      "userVac": []
     }
 
   ]
