@@ -69,7 +69,7 @@ namespace health.Controllers
         [HttpGet(Name = "GetUsers")]
         public GetUsers Get()
         {
-            return respClass;
+            return Helper.ParseJsonFromDB<GetUsers>("users.json");
         }
     }
     //[Route("api/[controller]")]

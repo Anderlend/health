@@ -6,16 +6,16 @@ namespace health
 {
     public class Helper
     {
-        static string PathToFolderDB = $"{System.IO.Directory.GetCurrentDirectory()}/DB/users.json";
+        static string PathToFolderDB = "DB";//$"{System.IO.Directory.GetCurrentDirectory()}/DB/users.json";
        
 
-        //public static Users ParseJsonFromDB(string fileName)
-        //{
-        //    var context = File.ReadAllText(PathToFolderDB);
+        public static T ParseJsonFromDB<T>(string fileName)
+        {
+            var context = File.ReadAllText(Path.Combine(PathToFolderDB, fileName));
 
-        //    Users resp = JsonConvert.DeserializeObject<Users>(context);
+            T resp = JsonConvert.DeserializeObject<T>(context);
 
-        //    return resp;
-        //}
+            return resp;
+        }
     }
 }
