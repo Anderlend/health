@@ -18,29 +18,25 @@ namespace health
             return resp;
         }
 
-        public static UserVac ParseJsonToDB<UserVac>(string fileName, string dataToUpdate)
+        public static UserVac ParseJsonToDB(string fileName, UserVac dataToUpdate, Guid id)
         {
             var context = File.ReadAllText(Path.Combine(PathToFolderDB, fileName));
 
             GetUsers respUsers = JsonConvert.DeserializeObject<GetUsers>(context);
-            UserVac resp = JsonConvert.DeserializeObject<UserVac>(dataToUpdate);
-
+            dataToUpdate.Id = Guid.NewGuid();
 
            foreach(var user in respUsers.Users)
             {
-                if(user.Id == Guid.Empty)
+                if(user.Id == id)
                 {
-                    //user.UserVac.Add(resp);
-
+                    user.UserVac.Add(dataToUpdate);
                 }
             }
 
+            var serializedUsers = JsonConvert.SerializeObject(respUsers);
+            File.WriteAllText(Path.Combine(PathToFolderDB, fileName), serializedUsers);
 
-
-           //joks13131313@gmail.comFile.WriteAllText()
-
-
-            return resp;
+            return dataToUpdate;
         }
     }
 }

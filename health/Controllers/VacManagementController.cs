@@ -5,7 +5,7 @@ namespace health.Controllers
 {
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("vac-management/[controller]")]
     public class UserVacController : ControllerBase
     {
         private readonly ILogger<UserVacController> _logger;
@@ -15,15 +15,14 @@ namespace health.Controllers
             _logger = logger;
         }
 
-        [HttpPost(Name = "UserVac")]
-        public User Save([FromBody] User m)
+        [HttpPost("{userId}", Name = "UserVac")]
+        public UserVac Save([FromBody, FromQuery] UserVac m, Guid userId)
         {
             // I am just returning the posted model as it is. 
             // You may do other stuff and return different response.
             // Ex : missileService.LaunchMissile(m);
 
-
-            return m;
+            return Helper.ParseJsonToDB("users.json", m, userId);
 
         }
 

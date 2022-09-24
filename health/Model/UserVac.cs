@@ -11,5 +11,6 @@
         public DateTimeOffset Data { get; set; }
         public string VacSlug { get; set; }
         public string[] Symptomatic { get; set; }
+        public Guid? Id { get; set; }
     }
 }
