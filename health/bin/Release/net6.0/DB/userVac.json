@@ -1,0 +1,10 @@
+{
+  "userVac": [
+    {
+      "data": "2022-02-24",
+      "vacSlug": "buster",
+      "symptomatic": [ "aaaa", "dddd" ]
+    }
+
+  ]
+}
